@@ -7,7 +7,7 @@ import {
   textStyle,
   useLayout,
   TextCopy,
-} from '@aragon/ui'
+} from '@conflux-/aragon-ui'
 import Page from 'comps/Page/Page'
 import readme from 'ui-docs/TextStyles.md'
 

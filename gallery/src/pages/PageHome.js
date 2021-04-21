@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ButtonBase, GU, Link, textStyle, useTheme } from '@aragon/ui'
+import { ButtonBase, GU, Link, textStyle, useTheme } from '@conflux-/aragon-ui'
 import Page from 'comps/Page/Page'
 import env from '../environment'
 
