@@ -98,7 +98,6 @@ module.exports = (env, argv) => {
                   displayName: !production,
                 },
               ],
-              ['@babel/plugin-proposal-class-properties'],
             ],
           },
         },
