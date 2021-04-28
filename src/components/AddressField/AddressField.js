@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import { GU } from '../../style'
 import TextCopy from '../TextCopy/TextCopy'
 import EthIdenticon from '../EthIdenticon/EthIdenticon'
+import { formatAddress } from '../../utils'
 
 const HEIGHT = 5 * GU
 const IDENTICON_SIZE = 6 * GU
 
 const AddressField = React.forwardRef(function AddressField(
-  { address, autofocus, icon, onCopy, ...props },
+  { address, chainId, autofocus, icon, onCopy, ...props },
   ref
 ) {
   return (
@@ -19,6 +20,7 @@ const AddressField = React.forwardRef(function AddressField(
           <div>
             <EthIdenticon
               address={address}
+              chainid={chainId}
               onCopy={onCopy}
               scale={2}
               css={`
@@ -30,13 +32,14 @@ const AddressField = React.forwardRef(function AddressField(
         )
       }
       autofocus={autofocus}
-      value={address}
+      value={formatAddress(address, chainId)}
     />
   )
 })
 
 AddressField.propTypes = {
   address: PropTypes.string.isRequired,
+  chainId: PropTypes.number.isRequired,
   autofocus: PropTypes.bool,
   icon: PropTypes.node,
   onCopy: PropTypes.func,

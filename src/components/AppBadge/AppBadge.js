@@ -11,6 +11,7 @@ import iconDefaultSvg from './assets/app-default.svg'
 
 const AppBadge = React.memo(function AppBadge({
   appAddress,
+  chainId,
   badgeOnly,
   compact,
   iconSrc,
@@ -85,6 +86,7 @@ const AppBadge = React.memo(function AppBadge({
         appAddress && (
           <AppBadgePopover
             appAddress={appAddress}
+            chainId={chainId}
             iconFallbackSrc={iconDefaultSvg}
             iconSrc={iconSrc}
             networkType={networkType}
@@ -101,6 +103,7 @@ const AppBadge = React.memo(function AppBadge({
 })
 AppBadge.propTypes = {
   appAddress: PropTypes.string,
+  chainId: PropTypes.number,
   badgeOnly: PropTypes.bool,
   compact: PropTypes.bool,
   iconSrc: PropTypes.string,

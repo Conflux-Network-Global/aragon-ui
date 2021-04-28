@@ -1,6 +1,5 @@
 import sha3 from 'js-sha3'
 import { warn } from './environment'
-
 const { keccak_256: keccak256 } = sha3
 
 const EMPTY_ADDRESS = '0x0000000000000000000000000000000000000000'
@@ -196,4 +195,8 @@ export function tokenIconUrl(address = '') {
   }
 
   return `${TRUST_WALLET_BASE_URL}/assets/${address}/logo.png`
+}
+
+export function formatAddress(address, chainId) {
+  return format.address(address, chainId)
 }

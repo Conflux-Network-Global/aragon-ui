@@ -9,6 +9,7 @@ import Link from '../Link/Link'
 
 const AppBadgePopover = React.memo(function AppBadgePopover({
   appAddress,
+  chainId,
   iconFallbackSrc,
   iconSrc,
   networkType,
@@ -26,6 +27,7 @@ const AppBadgePopover = React.memo(function AppBadgePopover({
           {({ exists, displayFallback }) => (
             <AddressField
               address={appAddress}
+              chainid={chainId}
               icon={<Icon src={exists ? iconSrc : iconFallbackSrc} />}
             />
           )}
@@ -43,6 +45,7 @@ const AppBadgePopover = React.memo(function AppBadgePopover({
 
 AppBadgePopover.propTypes = {
   appAddress: PropTypes.string.isRequired,
+  chainId: PropTypes.number.isRequired,
   iconFallbackSrc: PropTypes.string,
   iconSrc: PropTypes.string,
   networkType: PropTypes.string,
