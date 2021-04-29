@@ -6,6 +6,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import progress from 'rollup-plugin-progress'
 import analyze from 'rollup-plugin-analyzer'
 import glob from 'fast-glob'
+import json from '@rollup/plugin-json'
 
 const production = !process.env.ROLLUP_WATCH
 
@@ -100,8 +101,12 @@ export default (async () => {
         runtimeHelpers: true,
         exclude: 'node_modules/**',
       }),
-      resolve(),
+      resolve({
+        browser: true,
+        mainFields: ['browser', 'jsnext:main', 'main'],
+      }),
       commonjs(),
+      json(),
     ],
   }
 })()

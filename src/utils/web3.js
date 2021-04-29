@@ -1,5 +1,7 @@
 import sha3 from 'js-sha3'
 import { warn } from './environment'
+import { format } from 'js-conflux-sdk/src/index'
+
 const { keccak_256: keccak256 } = sha3
 
 const EMPTY_ADDRESS = '0x0000000000000000000000000000000000000000'
