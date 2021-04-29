@@ -9,6 +9,7 @@ import Link from '../Link/Link'
 
 const TokenBadgePopover = React.memo(function TokenBadgePopover({
   address,
+  chainId,
   iconSrc,
   networkType,
   onClose,
@@ -26,6 +27,7 @@ const TokenBadgePopover = React.memo(function TokenBadgePopover({
             {({ exists }) => (
               <AddressField
                 address={address}
+                chainId={chainId}
                 icon={exists ? <Icon src={iconSrc} /> : null}
               />
             )}
@@ -45,6 +47,7 @@ const TokenBadgePopover = React.memo(function TokenBadgePopover({
 
 TokenBadgePopover.propTypes = {
   address: PropTypes.string.isRequired,
+  chainId: PropTypes.number.isRequired,
   iconSrc: PropTypes.string,
   networkType: PropTypes.string,
   onClose: PropTypes.func,

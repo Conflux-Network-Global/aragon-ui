@@ -8,6 +8,7 @@ import EthIdenticon from '../EthIdenticon/EthIdenticon'
 import IdentityBadgePopover from './IdentityBadgePopover'
 
 const IdentityBadge = React.memo(function IdentityBadge({
+  chainId,
   badgeOnly,
   compact,
   connectedAccount,
@@ -89,6 +90,7 @@ const IdentityBadge = React.memo(function IdentityBadge({
         address && (
           <IdentityBadgePopover
             address={address}
+            chainId={chainId}
             connectedAccount={connectedAccount}
             networkType={networkType}
             onClose={handleClose}
@@ -104,6 +106,7 @@ const IdentityBadge = React.memo(function IdentityBadge({
 })
 
 IdentityBadge.propTypes = {
+  chainId: PropTypes.number,
   badgeOnly: PropTypes.bool,
   compact: PropTypes.bool,
   connectedAccount: PropTypes.bool,

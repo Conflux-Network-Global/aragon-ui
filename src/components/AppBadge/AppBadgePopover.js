@@ -27,7 +27,7 @@ const AppBadgePopover = React.memo(function AppBadgePopover({
           {({ exists, displayFallback }) => (
             <AddressField
               address={appAddress}
-              chainid={chainId}
+              chainId={chainId}
               icon={<Icon src={exists ? iconSrc : iconFallbackSrc} />}
             />
           )}

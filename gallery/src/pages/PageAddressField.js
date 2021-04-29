@@ -10,11 +10,12 @@ function PageAddressField({ title }) {
     <Page title={title} readme={readme}>
       <Page.Demo opaque>
         <Container>
-          <AddressField address="0xcafE1A77e84698c83CA8931F54A755176eF75f2C" />
+          <AddressField address="0xcafE1A77e84698c83CA8931F54A755176eF75f2C" chainId={1} />
         </Container>
         <Container>
           <AddressField
             address="0xcafE1A77e84698c83CA8931F54A755176eF75f2C"
+            chainId={1}
             icon={
               <Tag
                 mode="identity"

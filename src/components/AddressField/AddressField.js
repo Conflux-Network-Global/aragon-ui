@@ -20,7 +20,6 @@ const AddressField = React.forwardRef(function AddressField(
           <div>
             <EthIdenticon
               address={address}
-              chainid={chainId}
               onCopy={onCopy}
               scale={2}
               css={`

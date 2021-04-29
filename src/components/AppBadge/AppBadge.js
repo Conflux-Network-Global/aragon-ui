@@ -2,7 +2,7 @@ import React, { useCallback, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { ImageExists } from '../../hooks'
 import { GU, RADIUS } from '../../style'
-import { isAddress, warn } from '../../utils'
+import { formatAddress, isAddress, warn } from '../../utils'
 import BadgeBase from '../BadgeBase/BadgeBase'
 import BadgePopoverActionType from '../BadgeBase/BadgePopoverActionType'
 import Tag from '../Tag/Tag'
@@ -79,7 +79,7 @@ const AppBadge = React.memo(function AppBadge({
       label={label}
       labelStyle={labelStyle}
       onClick={isValidAddress ? handleOpen : undefined}
-      title={appAddress}
+      title={formatAddress(appAddress, chainId)}
     >
       {popoverDisabled =>
         !popoverDisabled &&
