@@ -83,7 +83,7 @@ const TokenBadge = React.memo(function TokenBadge({
 })
 TokenBadge.propTypes = {
   address: PropTypes.string,
-  chainId: PropTypes.string,
+  chainId: PropTypes.number,
   badgeOnly: PropTypes.bool,
   className: PropTypes.string,
   compact: PropTypes.bool,
