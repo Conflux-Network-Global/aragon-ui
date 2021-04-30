@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { GU, textStyle } from '../../style'
-import { isAddress, shortenAddress, warnOnce } from '../../utils'
+import { formatAddress, isAddress, shortenAddress, warnOnce } from '../../utils'
 import BadgeBase from '../BadgeBase/BadgeBase'
 import BadgePopoverActionType from '../BadgeBase/BadgePopoverActionType'
 import EthIdenticon from '../EthIdenticon/EthIdenticon'
@@ -47,7 +47,10 @@ const IdentityBadge = React.memo(function IdentityBadge({
 
   const address = isAddress(entity) ? entity : null
   const displayLabel =
-    label || (address && shorten ? shortenAddress(address) : entity)
+    label ||
+    (address && shorten
+      ? shortenAddress(formatAddress(address, chainId))
+      : formatAddress(entity, chainId))
 
   return (
     <BadgeBase
