@@ -9,6 +9,7 @@ import TokenBadgePopover from './TokenBadgePopover'
 
 const TokenBadge = React.memo(function TokenBadge({
   address,
+  chainId,
   badgeOnly,
   className,
   compact,
@@ -67,6 +68,7 @@ const TokenBadge = React.memo(function TokenBadge({
         address && (
           <TokenBadgePopover
             address={address}
+            chainId={chainId}
             iconSrc={iconSrc}
             networkType={networkType}
             onClose={handleClose}
@@ -81,6 +83,7 @@ const TokenBadge = React.memo(function TokenBadge({
 })
 TokenBadge.propTypes = {
   address: PropTypes.string,
+  chainId: PropTypes.string,
   badgeOnly: PropTypes.bool,
   className: PropTypes.string,
   compact: PropTypes.bool,
