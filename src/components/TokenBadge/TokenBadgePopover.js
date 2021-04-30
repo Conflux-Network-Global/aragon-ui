@@ -33,7 +33,7 @@ const TokenBadgePopover = React.memo(function TokenBadgePopover({
             )}
           </ImageExists>
         ) : (
-          <AddressField address={address} />
+          <AddressField address={address} chainId={chainId} />
         )
       }
       link={etherscanUrl && <Link href={etherscanUrl}>See on Etherscan</Link>}
