@@ -79,7 +79,7 @@ const AppBadge = React.memo(function AppBadge({
       label={label}
       labelStyle={labelStyle}
       onClick={isValidAddress ? handleOpen : undefined}
-      title={formatAddress(appAddress, chainId)}
+      title={appAddress ? formatAddress(appAddress, chainId) : undefined}
     >
       {popoverDisabled =>
         !popoverDisabled &&
