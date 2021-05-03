@@ -50,7 +50,7 @@ const IdentityBadge = React.memo(function IdentityBadge({
     label ||
     (address && shorten
       ? shortenAddress(formatAddress(address, chainId))
-      : formatAddress(entity, chainId))
+      : entity)
 
   return (
     <BadgeBase
