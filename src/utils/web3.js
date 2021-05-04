@@ -193,7 +193,7 @@ export function tokenIconUrl(address = '') {
   }
 
   if (address === EMPTY_ADDRESS) {
-    return `${TRUST_WALLET_BASE_URL}/info/logo.png`
+    return `https://raw.githubusercontent.com/conflux-dao-toc/conflux-remix-plugin/main/public/icon.png`
   }
 
   return `${TRUST_WALLET_BASE_URL}/assets/${address}/logo.png`
